@@ -8,14 +8,14 @@
 
 
 <body>
-	<h1>Hello World!</h1>
-	<p>This is Marcus' Django application.</p>
-	<h2>Things I'm exicited for:</h2>
-	<ul>
-		<li>Sonic 3 Movie</li>
-		<li>Graduation</li>
-		<li>Continued Learning in Computers/Programming</li>
-	</ul>
+<!-- Posts -->
+{% for post in posts %}
+	<article>
+	<time>published : {{ post.published_date }}</time>
+	<h2><a=href="">{{ post.title }}</a></h2>
+	<p>{{ post.text|linebreaksbr }}</p>
+	</article>
+{% endfor %}
 </body>
 
 
